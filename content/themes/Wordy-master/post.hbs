@@ -1,0 +1,30 @@
+{{!< default}}
+
+<main class="post-content">
+
+{{#post}}
+
+<header class="post-header">
+
+  <h2><span class="date">{{date published_at format="MMMM DD, YYYY"}}</span><span class="middot"> &middot; </span><span class="read-time"></span> {{#if tags}} <span class="middot"> &middot; </span><span class="tags">{{tags separator=" "}}</span> {{/if}} </h2>
+  <h1 class="title">{{title}}</h1>
+
+</header>
+
+<article id="emojify" class="content">
+
+  {{content}}
+
+</article>
+
+
+
+<footer class="post-footer">
+
+  <!-- Disqus comments -->
+  <div id="disqus_thread" class="disqus" data-disqus-shortname="#USERNAME#" data-disqus-url="{{url absolute="true"}}"></div>
+</footer>
+
+{{/post}}
+
+</main>

@@ -1,0 +1,52 @@
+{{!< default}}
+
+  <h2 class="archive-title">{{tag.name}}</h2>
+
+
+
+  <main class="post-list">
+
+{{#foreach posts}}
+
+    {{#has tag="external"}}
+
+      <h3 class="post-link external ">
+      
+      {{#has tag="print"}}
+       <i class='icon icon-page'></i>
+        {{/has}}
+        
+       {{#has tag="video"}}
+       <i class='icon icon-play-video'></i>
+       {{/has}}
+        
+        <a class="js-link-to-update" target="_blank" href="{{url}}" title="{{title}}">{{title}}</a>
+         &middot; 
+        <span class="date">{{date published_at format="YYYY"}}</span>
+        <div class="link source">
+          {{content}}
+        </div>
+      </h3>
+
+      {{else}}
+
+      <h3 class="post-link">
+        <a href="{{url}}" title="{{title}}">{{title}}</a></br></br>
+         &middot; 
+        <span class="date">{{date published_at format="YYYY"}}</span>
+         &middot; 
+        <span class="read-time" data-file="{{url}}" data-target=".content"></span>
+        {{#if tags}} 
+           &middot; 
+          <span class="tags">{{tags separator=" "}}</span> 
+        {{/if}} 
+      </h3>
+
+    {{/has}}
+
+{{/foreach}}
+
+
+
+
+</main>

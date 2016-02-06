@@ -1,0 +1,50 @@
+{{!< default}}
+
+{{#post}}
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <h2 class="post-title">{{{title}}}</h2>
+    </header>
+
+    <section class="{{post_class}}">
+      {{content}}
+      <p>
+      For media inquiries, including writing and speaking requests, please contact Dorian Karchmar at William Morris Endeavor (dkar@wmeentertainment.com).</p>
+      <p>
+
+To send a personal message to Dr. Kalanithi, please use this form:
+</p>
+      <div id="page-wrapper">
+	  <h2>Contact Form </h2>
+
+	  <div id="form-messages"></div>
+		
+	<form id="ajax-contact" method="post" action="the URL of your mailer php script">
+			<div class="field">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+
+			<div class="field">
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required>
+			</div>
+
+			<div class="field">
+				<label for="message">Message:</label>
+				<textarea id="message" name="message" required></textarea>
+			</div>
+
+			<div class="field">
+				<button type="submit">Send</button>
+		</div>
+	</form>
+</div>
+
+    </section>
+
+  </article>
+
+{{/post}}
